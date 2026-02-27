@@ -1,11 +1,10 @@
 class Solution {
   public:
-  
     int func(int k,vector<vector<int>>pre,int n,int m,int x){
         int ans=0;
         for(int i=0;i+k<=n;i++){
             for(int j=0;j+k<=m;j++){
-                int val=pre[i+k][j+k]+pre[i][j]-pre[i+k][j]-pre[i][j+k];
+                int val=pre[i+k][j+k]-pre[i+k][j]-pre[i][j+k]+pre[i][j];
                 if(val==x){
                     ans++;
                 }
