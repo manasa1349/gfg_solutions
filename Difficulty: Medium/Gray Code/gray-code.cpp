@@ -1,6 +1,21 @@
 class Solution {
   public:
     vector<string>ans;
+    //"" (rev = F)
+    // ├── "0" (rev = F)
+    // │   ├── "00" (rev = F)
+    // │   │   ├── "000" 
+    // │   │   └── "001"
+    // │   └── "01" (rev = T)
+    // │       ├── "011" 
+    // │       └── "010" 
+    // └── "1" (rev = T)
+    //     ├── "11" (rev = F)
+    //     │   ├── "110" 
+    //     │   └── "111" 
+    //     └── "10" (rev = T)
+    //         ├── "101" 
+    //         └── "100" 
     void func(string ds,int n,bool rev){
         if(ds.size()==n){
             ans.push_back(ds);
