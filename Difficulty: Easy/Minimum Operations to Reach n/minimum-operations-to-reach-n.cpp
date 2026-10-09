@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    int minOperation(int n) {
+        // code here
+        if(n==1) return 1;
+        int cnt=0;
+        while(n>0){
+            if(n%2==0){
+                n/=2;
+            }else{
+                n-=1;
+            }
+            cnt++;
+        }
+        return cnt;
+    }
+};
